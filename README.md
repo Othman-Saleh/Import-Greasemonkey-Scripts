@@ -46,7 +46,7 @@ Notes
     
 Warning
 
-    • This script assumes your new machine has no scripts on it, if you do they will be automatically deleted and there will be no way to recover them, use with care.
+    • This script assumes your new machine has no scripts on it, if it does they will be automatically deleted and there will be no way to recover them, use with care.
 
 License
 
