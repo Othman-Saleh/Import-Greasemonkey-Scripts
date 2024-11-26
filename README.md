@@ -1,13 +1,13 @@
 This PowerShell script copies your old Greasemonkey scripts to your new machine. It automates the process of transferring data from your old database to a new one, shutting down and restarting Firefox, dumping data, and ensuring proper database structure in the new database.
 
-The Greasmonkey scripts are stored in a SQLite file called "gyreekansoem.sqlite", which can be found in this path:
+The Greasmonkey scripts are stored in a SQLite file called "61413404gyreekansoem.sqlite", which can be found in this path:
 
     • C:\Users\[USER]\AppData\Roaming\Mozilla\Firefox\Profiles\[PROFILE].default-release\storage\default\moz-extension+++[EXT-ID]\idb\
 
 Features
 
     • Shuts down Firefox to ensure no interference during the process.
-    • Deletes the current database (gyreekansoem.sqlite) from the new machine.
+    • Deletes the current database (61413404gyreekansoem.sqlite) from the new machine.
     • Dumps data from the old database and filters out the relevant INSERT statements for the new database.
     • Drops existing indexes and triggers from the new database before importing the data.
     • Imports the filtered data into the new database.
