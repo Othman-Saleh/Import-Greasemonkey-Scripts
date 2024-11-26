@@ -35,12 +35,12 @@ Usage
 
 The script will automatically handle the following steps:
 
-    • Shutdown Firefox.
-    • Delete the new database.
-    • Dump and filter the old database's data.
-    • Drop old indexes and triggers in the new database.
-    • Import the filtered data into the new database.
-    • Restart Firefox.
+    1. Shutdown Firefox.
+    2. Delete the new database.
+    3. Dump and filter the old database's data.
+    4. Drop old indexes and triggers in the new database.
+    5. Import the filtered data into the new database.
+    6. Restart Firefox.
 
 Notes
 
