@@ -12,7 +12,7 @@ Features
     • Drops existing indexes and triggers from the new database before importing the data.
     • Imports the filtered data into the new database.
     • Restarts Firefox to verify that the new database is successfully imported.
-    • Suggests creating a backup of the new database after migration.
+    • Reminds user to create a backup of the new database after migration.
 
 Requirements
 
