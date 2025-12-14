@@ -2,6 +2,9 @@
 $oldDatabasePath = "A:\OldPath\61413404gyreekansoem.sqlite" # Path to old database
 $newDatabasePath = "C:\NewPath\61413404gyreekansoem.sqlite" # Path to new database
 
+# Check for old database first
+if (-not (Test-Path -LiteralPath $oldDatabasePath)) { Write-Host "Old database path not found. Stopping script." -ForegroundColor Red return }
+
 # Shut down Firefox
 Write-Host "Shutting down Firefox..."
 Stop-Process -Name "firefox" -Force -ErrorAction SilentlyContinue
