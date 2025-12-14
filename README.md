@@ -6,6 +6,7 @@ The Greasmonkey scripts are stored in a SQLite file called "61413404gyreekansoem
 
 Features
 
+    • Checks that the old database file exits before starting.
     • Shuts down Firefox to ensure no interference during the process.
     • Deletes the current database (61413404gyreekansoem.sqlite) from the new machine.
     • Dumps data from the old database and filters out the relevant INSERT statements for the new database.
