@@ -1,6 +1,7 @@
 # Paths
 $oldDatabasePath = "A:\OldPath\61413404gyreekansoem.sqlite" # Path to old database
 $newDatabasePath = "C:\NewPath\61413404gyreekansoem.sqlite" # Path to new database
+$tool = "C:\Program Files\Sqlite\sqlite3.exe"
 
 # Check for old database first
 if (-not (Test-Path -LiteralPath $oldDatabasePath)) { Write-Host "Old database path not found. Stopping script." -ForegroundColor Red return }
@@ -48,7 +49,7 @@ Write-Host "Firefox is completely shut down."
 # Dump data from the old database
 Write-Host "Dumping data from the old database..."
 $sqliteDumpPath = "$env:TEMP\dump.sql"
-& sqlite3.exe $oldDatabasePath ".dump" > $sqliteDumpPath
+&$tool $oldDatabasePath ".dump" > $sqliteDumpPath
 
 # Filter the dump file to include only the desired INSERT statements
 Write-Host "Filtering the dump file..."
@@ -66,12 +67,12 @@ DROP TRIGGER IF EXISTS file_update_trigger;
 
 # Execute the SQL commands using sqlite3.exe
 Write-Host "Dropping indexes and triggers in the new database..."
-$sqlCommands | & sqlite3.exe $newDatabasePath
+$sqlCommands | &$tool $newDatabasePath
 
 
 # Import data into the new database
 Write-Host "Importing data into the new database..."
-Get-Content $sqliteDumpPath | & sqlite3.exe $newDatabasePath
+Get-Content $sqliteDumpPath | &$tool $newDatabasePath
 
 
 # Start Firefox to verify the data is imported
