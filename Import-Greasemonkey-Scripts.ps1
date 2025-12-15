@@ -1,7 +1,7 @@
 # Paths
 $oldDatabasePath = "A:\OldPath\61413404gyreekansoem.sqlite" # Path to old database
 $newDatabasePath = "C:\NewPath\61413404gyreekansoem.sqlite" # Path to new database
-$tool = "C:\Program Files\Sqlite\sqlite3.exe"
+$tool = "C:\Program Files\Sqlite\sqlite3.exe" # Path to new sqlite
 
 # Check for old database and sqlite first
 if (-not (Test-Path -LiteralPath $oldDatabasePath)) { Write-Host "Old database path not found. Stopping script." -ForegroundColor Red return }
