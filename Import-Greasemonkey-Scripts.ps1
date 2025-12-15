@@ -3,8 +3,9 @@ $oldDatabasePath = "A:\OldPath\61413404gyreekansoem.sqlite" # Path to old databa
 $newDatabasePath = "C:\NewPath\61413404gyreekansoem.sqlite" # Path to new database
 $tool = "C:\Program Files\Sqlite\sqlite3.exe"
 
-# Check for old database first
+# Check for old database and sqlite first
 if (-not (Test-Path -LiteralPath $oldDatabasePath)) { Write-Host "Old database path not found. Stopping script." -ForegroundColor Red return }
+if (-not (Test-Path -LiteralPath $tool)) { Write-Host "Sqlite not installed. Please get it for free here: https://sqlite.org/download.html" -ForegroundColor Red return }
 
 # Shut down Firefox
 Write-Host "Shutting down Firefox..."
