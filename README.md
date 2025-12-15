@@ -17,7 +17,8 @@ Features
 
 Requirements
 
-    • SQLite: Ensure sqlite3.exe is available on your system. You can download it here for free: https://sqlite.org/download.html
+    • SQLite: Ensure sqlite3.exe is available on your system.
+              You can download it here for free: https://sqlite.org/download.html
     • Firefox: The script assumes Firefox is installed and running on the machine.
     • PowerShell: This script is written for PowerShell and will run on Windows.
 
@@ -33,6 +34,7 @@ Usage
 
     • $oldDatabasePath = "A:\OldPath\61413404gyreekansoem.sqlite"  # Path to old database
     • $newDatabasePath = "C:\NewPath\61413404gyreekansoem.sqlite"  # Path to new database
+    • $tool = "C:\Program Files\Sqlite\sqlite3.exe" # Path to new sqlite
 
 The script will automatically handle the following steps:
 
