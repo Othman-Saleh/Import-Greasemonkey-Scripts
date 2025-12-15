@@ -17,7 +17,7 @@ Features
 
 Requirements
 
-    • SQLite: Ensure sqlite3.exe is available on your system.
+    • SQLite: Ensure sqlite3.exe is available on your system. You can download it here for free: https://sqlite.org/download.html
     • Firefox: The script assumes Firefox is installed and running on the machine.
     • PowerShell: This script is written for PowerShell and will run on Windows.
 
